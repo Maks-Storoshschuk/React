@@ -1,5 +1,5 @@
 import Simpson from "./Simpson";
-
+import './simpsons2.css'
 let simpsons = [
     {
         name: 'Bart',
