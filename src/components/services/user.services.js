@@ -4,7 +4,7 @@ function getUsers(){
 }
 
 function getUser(id){
-    return fetch('https://jsonplaceholder.typicode.com/users'+id)
+    return fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(value => value.json())
 }
 
