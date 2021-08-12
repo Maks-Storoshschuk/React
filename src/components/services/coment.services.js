@@ -10,14 +10,4 @@ const getComments = ()=>{
 const getComment = (id)=>{
     return axiosInstance(`/posts/${id}/comments`)
 }
-export {getComments,getComment}
-// function getComments(){
-//     return fetch('https://jsonplaceholder.typicode.com/comments')
-//         .then(value => value.json())
-// };
-//
-// function geComment(id){
-//     return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
-//         .then(value => value.json())
-// };
-
+export {getComment,getComments}

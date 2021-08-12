@@ -1,14 +1,21 @@
-// import Address from "../address/Address";
+import {Post} from '../post/Post'
+import {useEffect, useState} from "react";
+import {getPostsOfUser} from "../services/post.services";
 
 export default function User({item}){
-    // let {address}= item
+    let [posts,setPosts] = useState([])
+
+    useEffect(()=>{
+        getPostsOfUser(item.id).then(({data})=>setPosts([...data]))
+    }, []);
     return(
         <div>
-            <h2>{item.id} {item.name} {}</h2>
-            <h3>{item.username}. {item.email}</h3>
-            {/*<Address*/}
-            {/*address = {address}*/}
-            {/*/>*/}
+            <h2>Ім'я користувача - {item.name}</h2>
+            <div>
+                {
+                    posts.map(value => <Post item={value} key={value.id}/>)
+                }
+            </div>
         </div>
     )
 }
