@@ -7,8 +7,8 @@ export default function Users(){
 let [users,setUsers] = useState([]);
 
 useEffect(()=>{
-    getUsers().then((value => setUsers([...value])))
-
+    // getUsers().then((value => setUsers([...value])))
+    getUsers().then(value => setUsers([...value.data]))
 },[]);
 
 

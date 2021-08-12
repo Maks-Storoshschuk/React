@@ -6,7 +6,8 @@ export default function Coments(){
     let [comments,setComments] = useState([]);
 
     useEffect(()=>{
-        getComments().then((value => setComments([...value])))
+        getComments().then(value => setComments([...value.data]))
+        // getComments().then((value => setComments([...value])))
     },[]);
     return(
         <ul>
