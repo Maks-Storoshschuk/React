@@ -1,7 +1,15 @@
-div{
-    background-color: bisque;
+body>div{
+
     text-align: center;
     width: 80%;
     margin-left: 10%;
     padding-top: 20px;
+
+}
+body{
+    background-color: black;
+}
+div>div>div>div{
+    background-color: bisque;
+    margin-bottom: 10px;
 }

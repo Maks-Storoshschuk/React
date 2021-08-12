@@ -1,0 +1,15 @@
+.comment{
+    border: 3px solid gray;
+}
+.comment>div{
+    background-color: whitesmoke;
+    border: 10px solid whitesmoke;
+    border-radius: 50px;
+}
+.comment>div{
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5px;
+
+}

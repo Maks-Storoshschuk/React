@@ -1,8 +1,11 @@
-
+import './Coments.css'
 export function Comments({item}){
     return(
-            <i>
-                {item.body}
-            </i>
+            <div>
+                <i>
+                    {item.body}
+                </i>
+            </div>
+
     )
 }
