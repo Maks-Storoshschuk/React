@@ -19,7 +19,6 @@ export default function Users(){
                     users.map(value => <User item ={value} key ={value.id} choose ={choose}/>)
                 }
             </div>
-
             {
                 post && <div className={'percent'}>  <h2>Пости користувача</h2>  - {post} </div>
             }

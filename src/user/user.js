@@ -7,11 +7,10 @@ export default function User({item,choose}){
 
     useEffect(()=>{
         getPostsOfUser(item.id).then(({data})=>setPosts([...data]))
-    }, []);
+    }, [item.id]);
     return(
         <div>
             <h2>{item.name}</h2>
-
 
             <button onClick={()=> {choose (
                 <div>
