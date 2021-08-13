@@ -1,0 +1,14 @@
+.d-flex{
+    display: flex;
+}
+.d-flex>div{
+    text-align: center;
+
+    width: 100%;
+
+
+}
+.percent{
+    width: 50%;
+    border: 1px solid black;
+   }
