@@ -20,7 +20,7 @@ export default function Users(){
                 }
             </div>
             {
-                post && <div className={'percent'}>  <h2>Пости користувача</h2>  - {post} </div>
+                post && <div className={'percent'}>  <h2>Пости користувача</h2>  {post} </div>
             }
         </div>
 
