@@ -13,10 +13,8 @@ export default function Form(){
         let tempAuto = {model,price,year}
         setAuto({...tempAuto})
         saveAuto(tempAuto)
-
     }
     console.log(auto)
-
 
     const changeModel = (e)=>{
         setModel(e.target.value)
