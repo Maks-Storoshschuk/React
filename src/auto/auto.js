@@ -8,7 +8,7 @@ export default function Auto(){
         getAuto().then(value=>setCars(value))
     },[])
     return(
-        <div>
+        <div className={'judas'}>
             {
                 cars.map(value => <Car item={value} key = {value.id} />)
             }

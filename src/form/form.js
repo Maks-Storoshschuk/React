@@ -3,13 +3,12 @@ import {saveAuto} from "../auto.services/auto.services";
 
 export default function Form(){
 
-    let [model,setModel] = useState('model')
-    let [price,setPrice] = useState('price')
-    let [year,setYear] = useState('year')
+    let [model,setModel] = useState([])
+    let [price,setPrice] = useState([])
+    let [year,setYear] = useState([])
     let [auto,setAuto] = useState({model: '', price: '',year: ''})
 
     let onsubmitForm = (e)=>{
-        e.preventDefault();
         let tempAuto = {model,price,year}
         setAuto({...tempAuto})
         saveAuto(tempAuto)
@@ -29,25 +28,14 @@ export default function Form(){
         <div>
             <form onSubmit={onsubmitForm}>
                 <div >
-                    <input type="text" name={'model'} value={model} onInput={changeModel}/>
-                    <input type="text" name={'price'} value={price} onInput={changePrice}/>
-                    <input type="text" name={'year'} value={year} onInput={changeYear}/>
+                    <input type="text" name={'model'} placeholder={'model'} onInput={changeModel}/>
+                    <input type="text" name={'price'} placeholder={'price'} onInput={changePrice}/>
+                    <input type="text" name={'year'} placeholder={'year'} onInput={changeYear}/>
                 </div>
                 <div>
                     <button>SAVE</button>
                 </div>
-
             </form>
-            <div>ви відправили на сервер
-                <div><h3>Модель авто <i>{model}</i>. <i>Ціна авто {price}</i>. <i>Рік випуску {year}</i></h3>
-                </div>
-
-
-
-
-
-            </div>
-
         </div>
     )
 }
