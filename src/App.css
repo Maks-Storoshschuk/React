@@ -1,0 +1,32 @@
+#root > div:nth-child(1){
+    display: flex;
+    border: 3px solid gainsboro;
+    width: 80%;
+    margin-left: 10%;
+
+}
+body{
+    background-color: black;
+    color: white;
+}
+a{
+    width: 25%;
+    font-weight: 900;
+    text-decoration: none;
+    color: lightgreen;
+    text-align: center;
+}
+#root>div>div{
+    width: 80%;
+    margin-left: 10%;
+    background-color: dimgrey;
+    text-align: center;
+}
+h2{
+    margin-top: 0;
+    color: cyan;
+}
+#root>div>div{
+    border: 3px solid greenyellow;
+    margin-top: 10px;
+}
