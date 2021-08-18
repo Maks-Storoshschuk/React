@@ -30,7 +30,7 @@ export default function EditForm({item}){
                 <div className={'editForms'} >
                     <input type="text" name={'model'} defaultValue={item.model} onInput={changeModel}/>
                     <input type="text" name={'price'} defaultValue={item.price} onInput={changePrice}/>
-                    <input type="text" name={'year'} defaultValue={item.year} onInput={changeYear}/>
+                    <input type="text" name={'year'} placeholder={item.year} onInput={changeYear}/>
                 </div>
                 <div>
                     <button>CONFIRM</button>
