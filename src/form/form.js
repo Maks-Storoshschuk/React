@@ -12,6 +12,7 @@ export default function Form(){
         let tempAuto = {model,price,year}
         setAuto({...tempAuto})
         saveAuto(tempAuto)
+        e.preventDefault()
     }
     console.log(auto)
 

@@ -1,4 +1,4 @@
-let api ='192.168.1.253'
+let api ='195.72.146.25'
 const saveAuto = ({model,price,year})=>{
     fetch(`http://${api}/api/v1/cars`, {
         method: 'POST',
@@ -16,7 +16,7 @@ function getAuto(){
             .then(value => value.json())
     )
 }
-function delAuto({id}){
+function delAuto(id){
     return (
         fetch(`http://${api}/api/v1/cars/${id}`, {
                 method:'DELETE'

@@ -12,6 +12,8 @@ export default function EditForm({item}){
         let tempAuto = {model,price,year,id}
         setAuto({...tempAuto})
         editauto(tempAuto)
+        b.preventDefault()
+
     }
     console.log(auto)
 
