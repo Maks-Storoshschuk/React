@@ -1,22 +1,11 @@
 import {useState} from "react";
-import {editauto} from "../auto.services/auto.services";
-
-export default function EditForm({item}){
+export default function EditForm({item,refreshCar}){
     let [model,setModel] = useState([])
     let [price,setPrice] = useState([])
     let [year,setYear] = useState([])
-    let [auto,setAuto] = useState({model: '', price: '',year: ''})
-
     let onsubmitForm = (b)=>{
-        let id =item.id
-        let tempAuto = {model,price,year,id}
-        setAuto({...tempAuto})
-        editauto(tempAuto)
         b.preventDefault()
-
     }
-    console.log(auto)
-
     const changeModel = (b)=>{
         setModel(b.target.value)
     }
@@ -25,6 +14,9 @@ export default function EditForm({item}){
     }
     const changeYear = (b)=>{
         setYear(b.target.value)
+    }
+    let ref=()=>{
+        refreshCar({model:model,price:price,year:year,id:item.id})
     }
     return(
         <div>
@@ -35,7 +27,8 @@ export default function EditForm({item}){
                     <input type="text" name={'year'} placeholder={item.year} onInput={changeYear}/>
                 </div>
                 <div>
-                    <button>CONFIRM</button>
+                    <button
+                    onClick={ref}>CONFIRM</button>
                 </div>
             </form>
         </div>

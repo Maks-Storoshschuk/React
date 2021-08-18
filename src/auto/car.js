@@ -2,10 +2,11 @@
 import {useState} from "react";
 import EditForm from "../form/newedit";
 
-export default function Car({item,deleteCar}){
+export default function Car({item,deleteCar,refreshCar}){
     let[editForm,setEditForm]=useState('')
     let oneClickDeleteCar = () =>{
         deleteCar(item.id);
+
     }
     return(
         <div className={'d-flex'}>
@@ -15,7 +16,7 @@ export default function Car({item,deleteCar}){
                 <button onClick={ oneClickDeleteCar
                 }>DELETE</button>
                 <button onClick={()=>{
-                    setEditForm(<EditForm item={item}/>)
+                    setEditForm(<EditForm item={item} refreshCar={refreshCar}/>);
                 }}>EDIT</button>
             </div>
             <div>

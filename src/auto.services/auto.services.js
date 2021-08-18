@@ -8,7 +8,13 @@ const saveAuto = ({model,price,year})=>{
         },
     })
         .then(value => value.json())
-        .then((json) => console.log("збережено", json))
+        .then((json) => {
+            if(json.model === model)
+            console.log('Збережено')
+            else (console.log('Помилка'))
+        })
+
+
 }
 function getAuto(){
     return (
