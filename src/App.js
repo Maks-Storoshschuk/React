@@ -8,9 +8,6 @@ import './App.css'
 import {Autos} from "./auto/auto";
 
 export default function App(){
-    let odd='odd'
-    let all='all'
-    let even = 'even'
     return(
         <Router>
             <div>
@@ -22,9 +19,9 @@ export default function App(){
             <div>
                 <Switch>
 
-                    <Route path={'/all'} render={()=><Autos item={all}/>}/>
-                    <Route path={'/even'} render={()=><Autos item={even}/>}/>
-                    <Route path={'/odd'} render={()=><Autos item={odd} />}/>
+                    <Route path={'/all'} render={(props)=><Autos param={props}/>}/>
+                    <Route path={'/even'} render={(props)=><Autos param={props}/>}/>
+                    <Route path={'/odd'} render={(props)=><Autos param={props} />}/>
                 </Switch>
             </div>
         </Router>

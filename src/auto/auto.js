@@ -1,26 +1,24 @@
 import {useEffect, useState} from "react";
 import {getAuto} from "../auto.services/auto.services";
 import Car from "./car";
-export function Autos(item){
+export function Autos({param}){
+    const {url} = param.match
     let [cars,setCars] = useState([])
-    let [filterCar,setFilterCar]=useState([])
     useEffect(()=>{
         getAuto().then(value=>{
             setCars([...value])
         })
-    },[item]);
-    if ({item}==='odd')
-        setFilterCar(cars.filter(value => (value.model.length)%2!==0))
-    if ({item}==='all')
-        setFilterCar(cars)
-    if ({item}==='even')
-        setFilterCar(cars.filter(value => (value.model.length)%2===0))
-    console.log(filterCar)
-    return(
-        <div className={'judas'}>
-            {
-                filterCar.map(value => <Car item={value} key = {value.id}/>)
-            }
-        </div>
-    )
+    },[]);
+
+    switch (url) {
+        case '/all':
+            return cars.map(value => <Car item={value} key={value.id}/>);
+        case '/even':
+            return cars.filter(value => (value.model.length)%2===0).map(value => <Car item={value} key={value.id}/>)
+        case '/odd':
+            return cars.filter(value => (value.model.length)%2!==0).map(value => <Car item={value} key={value.id}/>)
+        default:
+            return <h1>OGO</h1>
+    }
+
 }

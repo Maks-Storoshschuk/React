@@ -40,3 +40,6 @@ a{
 #root > div:nth-child(1){
     height: 100px;
 }
+img{
+    margin-left: 12%;
+}
