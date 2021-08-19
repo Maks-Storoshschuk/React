@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
 import {delAuto, editauto, getAuto} from "../auto.services/auto.services";
 import Car from "./car";
-export default function Auto(){
+export default function Auto({currentCar}){
     let [cars,setCars] = useState([])
     useEffect(()=>{
         getAuto().then(value=>{
             setCars([...value])
         })
-    },[]);
+    },[currentCar]);
     let refreshCar= (item)=>{
         editauto(item)
             .then(value => {

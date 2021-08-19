@@ -1,14 +1,23 @@
 import {useState} from "react";
 import {saveAuto} from "../auto.services/auto.services";
-export default function Form(){
+export default function Form({setCurrentCar}){
     let [model,setModel] = useState([])
     let [price,setPrice] = useState([])
     let [year,setYear] = useState([])
 
+
+
     let onsubmitForm = (e)=>{
         let tempAuto = {model,price,year}
-        saveAuto(tempAuto)
+        saveAuto(tempAuto).then(value => value.json())
+            .then((json) => {
+                if(json.model === model)
+                    console.log('Збережено!')
+                else (console.log('Помилка!'))
+                setCurrentCar(json);
+            })
         e.preventDefault()
+
     }
 
     const changeModel = (e)=>{

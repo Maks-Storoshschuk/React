@@ -1,14 +1,15 @@
 import Form from "./form/form";
-import Auto from "./auto/auto";
 import './App.css'
-
+import Auto from "./auto/auto";
+import {useState} from "react";
 
 export default function App(){
+    let [currentCar, setCurrentCar] = useState([]);
+
     return(
         <div>
-            <Form/>
-            <Auto/>
+            <Form setCurrentCar={setCurrentCar}/>
+            <Auto currentCar={currentCar}/>
         </div>
     )
 }
-App()
