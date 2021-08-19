@@ -24,31 +24,19 @@ h2{
     align-items: center;
     width: 60%;
 }
-input{
-    height: 30px;
-    width: 20%;
-    margin: 30px;
-    border-radius: 10px;
-    border: 2px solid greenyellow;
-}
-button{
-    margin-top: 10px;
-    margin-bottom: 30px;
+a{
     border: 2px solid black;
-    width: 60%;
+    width: 80%;
     background-color: chartreuse;
     color:black;
+    margin: 20px;
     font-weight: 800;
     border-radius: 20px;
-    height: 40px;
+    text-decoration: none;
+    padding:20px;
+    position: relative;
+    top: 45px
 }
-.dvaBatonu>button{
-    margin: 5px;
-
-}
-.d-none{
-    display: none;
-}
-.editForms>input{
-    margin: 10px;
+#root > div:nth-child(1){
+    height: 100px;
 }
