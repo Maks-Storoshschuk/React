@@ -18,7 +18,6 @@ const getUser=(id)=>{
         return(
             fetch(`${url}users/${id}`)
                 .then(value => value.json())
-                .then(value => {console.log(value)})
         )
 }
 export {getUsers,getPosts,getUser}

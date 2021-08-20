@@ -3,7 +3,6 @@ import {
     Switch,
     Route,
     Link,
-    withRouter
 } from "react-router-dom";
 import Users from "./users/Users";
 

@@ -3,15 +3,18 @@ import {getUser} from "../services/services";
 
 export default function UserDetailApi(props){
     let {match:{params:{id}}} = props
-    let [user,setuser] = useState([])
-    console.log(id)
+    console.log(props)
+    let [user,setuser] = useState({})
+
     useEffect(()=>{
-        getUser(id).then(value =>setuser([...value]))
+        getUser(id).then(value => {setuser({...value})}
+            )
     },[id])
     return(
         <div>
-            <h2>{item.id} {item.name} {}</h2>
-            <h3>{item.username}. {item.email}</h3>
+            <h2>{user.id} {user.name}</h2>
+            <h3>{user.username}. {user.email}</h3>
         </div>
+
     )
 }

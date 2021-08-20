@@ -1,13 +1,18 @@
-import {BrowserRouter as Router, Link} from "react-router-dom";
+// import {BrowserRouter as Router, Link} from "react-router-dom";
 
-export default function User({item}) {
+export default function User({item,history}) {
+    const details=()=>(
+        history.push(`/users/${item.id}`)
+    )
+
     return (
         <div>
             {item.id}. {item.name}.
-            <Link to={{
-                pathname: `/users/${item.id}`,
-                state: {item}
-            }}>UserDetails Api</Link>
+            <button onClick={details}>details</button>
+            {/*<Link to={{*/}
+            {/*    pathname: `/users/${item.id}`,*/}
+            {/*    state: {item}*/}
+            {/*}}>UserDetails Api</Link>*/}
         </div>
     )
 }
