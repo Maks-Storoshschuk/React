@@ -10,8 +10,8 @@ export default function UserDetailApi(props){
     },[id])
     return(
         <div>
-            {user.id}. {user.name}.
-            {user}
+            <h2>{item.id} {item.name} {}</h2>
+            <h3>{item.username}. {item.email}</h3>
         </div>
     )
 }
