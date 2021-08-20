@@ -1,19 +1,22 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../services/services";
-import {Route} from "react-router";
 import User from "./User";
+import {Route} from "react-router-dom";
+import UserDetails from "./user details";
 
-export default function Users(){
+export default function Users(props){
+    let {match:{url}}=props;
     let [users,setUsers] = useState([]);
-    useEffect( ()=>{
-        getUsers().then(value =>value )
-        setUsers([...value])
+    useEffect( async ()=>{
+        let response = await getUsers()
+            setUsers([...response])
+
     },[])
     return(
         <div>
             {users.map(value=><User item={value} key={users.id}/>)}
             <hr/>
-            {/*<Route path={'/users/:id'} component={UserDetails}/>*/}
+            <Route path={`${url}/:id`} component={UserDetails}/>
         </div>
 
     )

@@ -3,7 +3,6 @@ const getUsers=()=>{
     return(
         fetch(`${url}users`)
             .then(value => value.json())
-            .then(value => console.log(value))
     )
 
 }
