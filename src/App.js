@@ -13,7 +13,9 @@ export default function App(){
             <div>
                 <Link to ={'/users'}>User Page</Link>
                 <div>
-                    <Route path={'/users'} component={Users}/>
+                   <Switch>
+                       <Route path={'/users'} component={Users}/>
+                   </Switch>
 
                 </div>
             </div>

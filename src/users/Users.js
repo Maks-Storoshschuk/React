@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {getUsers} from "../services/services";
 import User from "./User";
 import {Route} from "react-router-dom";
-import UserDetails from "./user details";
+import UserDetailApi from "./userd detail Api";
 
 export default function Users(props){
     let {match:{url}}=props;
@@ -14,9 +14,11 @@ export default function Users(props){
     },[])
     return(
         <div>
-            {users.map(value=><User item={value} key={users.id}/>)}
+            {users.map(value=><User item={value} key={value.id}/>)}
             <hr/>
-            <Route path={`${url}/:id`} component={UserDetails}/>
+            <Route path={`${url}/:id`} render={(props)=>{
+                return <UserDetailApi {...props}/>
+            }}/>
         </div>
 
     )

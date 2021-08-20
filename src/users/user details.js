@@ -1,7 +1,9 @@
-export default function UserDetails(){
+export default function UserDetails(props){
+    const {item} = props.location.state
+    console.log(item)
     return(
         <div>
-            user details
+            {item.name}
         </div>
     )
 }
