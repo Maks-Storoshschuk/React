@@ -1,0 +1,26 @@
+.Users{
+    background-color: lightblue;
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    margin-left: 10%;
+    border: 4px solid black;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.Users>div{
+    margin: 20px;
+
+}
+button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+.UserInfo{
+    border: 2px solid slategray;
+    background-color: beige;
+}

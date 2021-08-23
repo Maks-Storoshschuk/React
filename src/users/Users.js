@@ -1,3 +1,4 @@
+import './Users.css'
 import {useEffect, useState} from "react";
 import {getUsers} from "../services/services";
 import User from "./User";
@@ -13,9 +14,8 @@ export default function Users(props){
 
     },[])
     return(
-        <div>
+        <div className={'Users'}>
             {users.map(value=><User history={history} item={value} key={value.id}/>)}
-            <hr/>
             <Route path={`${url}/:id`} render={(props)=>{
                 return <UserDetailApi {...props}/>
             }}/>

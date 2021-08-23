@@ -1,0 +1,17 @@
+body{
+    background: lightgreen;
+}
+.mainLink{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 900;
+    font-size: 32px;
+    background: cadetblue;
+}
+a{
+    color: black;
+    text-decoration: none;
+    background-color: gainsboro;
+    margin: 10px;
+    padding: 5px;
+}

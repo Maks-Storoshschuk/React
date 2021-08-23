@@ -1,0 +1,23 @@
+.Posts{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 24px;
+    margin-top: 20px;
+    display: flex;
+}
+.Posts>div>div>a{
+    background-color: lightblue;
+    padding: 2px;
+
+}
+.Posts>div>div{
+    margin-top: 10px;
+    background-color: slategray;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+.PostInfo{
+    margin-left: 5%;
+}
+

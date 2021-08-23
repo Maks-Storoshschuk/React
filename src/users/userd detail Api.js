@@ -11,7 +11,7 @@ export default function UserDetailApi(props){
             )
     },[id])
     return(
-        <div>
+        <div className={'UserInfo'}>
             <h2>{user.id} {user.name}</h2>
             <h3>{user.username}. {user.email}</h3>
         </div>
