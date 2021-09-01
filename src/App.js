@@ -1,9 +1,11 @@
+import Movie from "./movies";
 
-export default function App(){
-    return(
+const App = () => {
+    return (
         <div>
-
+            <Movie/>
         </div>
     )
 }
-App()
+
+export default App;
