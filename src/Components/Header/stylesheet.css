@@ -1,0 +1,14 @@
+.light *{
+    background-color: beige;
+    color: black;
+}
+.dark *{
+    background-color: black;
+    color: white;
+}
+.d-flex{
+    display: flex;
+}
+#root > div > div > button{
+    margin-left: 80%;
+}
