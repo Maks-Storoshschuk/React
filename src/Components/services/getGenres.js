@@ -16,6 +16,5 @@ const myAxios = axios.create(config);
 const getGenres = () => async (dispatch) => {
     const response = await myAxios.get('/genre/movie/list');
     dispatch(pushGenres(response.data.genres))
-    console.log(response.data.genres)
 }
 export {getGenres};

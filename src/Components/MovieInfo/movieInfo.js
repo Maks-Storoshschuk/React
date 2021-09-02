@@ -1,5 +1,10 @@
-export default function MovieInfo({item}){
-    console.log(item)
+import {useSelector} from "react-redux";
+
+export default function MovieInfo(item){
+    let {match:{params}}=item
+    console.log(params)
+    const movies = useSelector(({movies}) => movies)
+    console.log(movies)
     return(
         <div>
             <h2>{item.title}</h2>

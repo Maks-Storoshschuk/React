@@ -18,7 +18,10 @@ export default function Movie(){
 
     return(
         <div className={'movies'}>
+
             {movies.map(value => <MoviesCard  item ={value} key={value.id}/>)}
+
         </div>
+
     )
 }
