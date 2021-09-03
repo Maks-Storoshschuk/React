@@ -1,6 +1,5 @@
 
 export function MovieInfo({location: {state : item}}){
-    // console.log(state);
     return(
         <div>
             <h2>{item.title}</h2>

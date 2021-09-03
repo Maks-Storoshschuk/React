@@ -1,4 +1,5 @@
 import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 export function GenreName ({genre_ids}){
     const genres = useSelector(({genres}) => genres)
@@ -6,12 +7,14 @@ export function GenreName ({genre_ids}){
     const genresFilm = genre_ids.join(',');
 
     const genresName = genres.filter(value => genresFilm.indexOf(value.id) !== -1)
-
     return(
         <div>
-            {
-                genresName.map(value => <p>{value.name}</p>)
-            }
+
+                {
+                    genresName.map(value => <Link  to={{pathname: `/genre/id:${value.id}`,state: value.id}}><p>{value.name}</p></Link>)
+                }
+
+
         </div>
     )
 }

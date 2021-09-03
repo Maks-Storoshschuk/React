@@ -20,7 +20,7 @@ export default function Movie(){
 
 
     return(
-        <div className={'movies'}>
+        <div>
 
             {movies.map(value => <MoviesCard  item ={value} key={value.id}/>)}
 

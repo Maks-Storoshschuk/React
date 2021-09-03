@@ -3,7 +3,9 @@ import {useState} from "react";
 import {Link,BrowserRouter as Router,} from "react-router-dom";
 import './stylesheet.css'
 import GenresMovie from "./GenreBadge/genreMovie";
-import {GenreName} from "./GenreBadge/nameSelectMovie";
+import {GenreName} from "./GenreBadge/nameSelectMovieGenre";
+import Genres from "./GenreBadge/genre";
+import './stylesheet.css'
 
 const App = () => {
     let [theme,setTheme] =useState('light');
@@ -21,8 +23,10 @@ const App = () => {
                     }
                 }
                 }>change theme</button>
-                <Header/>
-                {/*<GenresMovie/>*/}
+                <div className={'d-flex'}>
+                    <Header/>
+                    <Genres/>
+                </div>
             </div>
         </div>
         </Router>

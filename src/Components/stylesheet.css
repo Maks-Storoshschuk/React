@@ -8,7 +8,11 @@
 }
 .d-flex{
     display: flex;
+    justify-content: center;
 }
 #root > div > div > button{
     margin-left: 80%;
+}
+.Main{
+    width: 80%;
 }

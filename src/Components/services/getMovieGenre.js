@@ -12,10 +12,12 @@ const config = {
 
 const myAxios = axios.create(config);
 
-const getGenresMovies = () => async (dispatch) => {
-    const response = await myAxios.get(`/discover/movie?with_genres=18`);
+const getGenresMovies = (item) => async (dispatch) => {
+    const response = await myAxios.get(`/discover/movie?with_genres=${item}`);
     dispatch(pushGenresMovies(response.data.results))
+    console.log(item)
 }
+
 
 export {getGenresMovies};
 
