@@ -5,7 +5,9 @@ import MoviesCard from "../MoviesListCard/moviescard";
 import './movie.css'
 
 export default function Movie(){
+
     const movies = useSelector(({movies}) => movies)
+
     console.log(movies);
 
 

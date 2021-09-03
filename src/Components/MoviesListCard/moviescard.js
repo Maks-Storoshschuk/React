@@ -1,5 +1,6 @@
 import {Link,} from "react-router-dom";
 import Stars from "../StarsRating/star-rating";
+import {GenreName} from "../GenreBadge/nameSelectMovie";
 
 export default function MoviesCard({item}){
 
@@ -10,7 +11,8 @@ export default function MoviesCard({item}){
                     src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="eror"/>
                     <h2>{item.title}</h2>
                 </Link>
-               <Stars item={item.vote_average}/>
+                <GenreName genre_ids={item.genre_ids}/>
+                <Stars item={item.vote_average}/>
             </div>
         </div>
     )
