@@ -1,33 +1,25 @@
 import Movie from "../MoviesList/movies";
-import './stylesheet.css'
-import {useState} from "react";
+
 import Genres from "../GenreBadge/genre";
-import {BrowserRouter as Router, Switch,Link,Route} from "react-router-dom";
+import {Switch,Link,Route} from "react-router-dom";
+import {MovieInfo} from "../MovieInfo/movieInfo";
 
 export default function Header(){
-    let [theme,setTheme] =useState('light');
-
     return(
-        <Router>
-            <div className={theme}>
-                <Link to={'/'}>Home</Link>
-                <button onClick={()=>{
-                    if(theme==="light"){
-                        setTheme('dark')
-                    }
-                    else if(theme==='dark'){
-                        setTheme('light')
-                    }
+            <div>
 
-                }
-                }>change theme</button>
                 <div className={'d-flex'}>
+                    <Switch>
                     <Route  exact path={'/'}>
                         <Movie/>
                         <Genres/>
                     </Route>
+
+                        <Route path={'/:id'} component={MovieInfo}/>
+
+                    </Switch>
+
                 </div>
             </div>
-        </Router>
     )
 }

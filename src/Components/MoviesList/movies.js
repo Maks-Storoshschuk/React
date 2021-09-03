@@ -8,6 +8,7 @@ export default function Movie(){
     const movies = useSelector(({movies}) => movies)
     console.log(movies);
 
+
     const dispatch = useDispatch();
 
 
