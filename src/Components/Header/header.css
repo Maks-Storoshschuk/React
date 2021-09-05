@@ -1,0 +1,37 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    height: 152px;
+    align-items: center;
+}
+.header > h4{
+    display: flex;
+    width: 25%;
+    align-items: center;
+}
+.header > h4 > img{
+    width: 72px;
+    border-radius: 36px;
+    height: 72px;
+    margin-right: 10%;
+
+}
+.header > form > input[type=text] {
+    height: 42px;
+    width: 90%;
+    border-radius: 10px;
+}
+.header > form{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    border-radius: 10px;
+}
+.header > img:nth-child(1){
+    margin-left: 5%;
+    width: 30%;
+}
+.d-flex{
+    display: flex;
+}

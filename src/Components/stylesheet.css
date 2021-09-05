@@ -1,18 +1,43 @@
-.light{
-    background-color: beige;
-    color: black;
-}
-.dark{
+.dark>div{
     background-color: black;
-    color: white;
+    color: darkseagreen;
 }
-.d-flex{
-    display: flex;
-    justify-content: center;
+.dark>div>div{
+    background-color: black;
+    color: darkseagreen;
 }
-#root > div > div > button{
-    margin-left: 80%;
+.dark>div>div>div{
+    background-color: black;
+    color: darkseagreen;
 }
-.Main{
-    width: 80%;
+.dark>div>div>div>div{
+    background-color: black;
+    color: darkseagreen;
+}
+.dark>div>div>div>div>div{
+    background-color: black;
+    color: darkseagreen;
+}
+.dark p *{
+    color: darkseagreen;
+}
+.dark> div > div > div > div.d-flex > div.genre > a> p{
+    color: darkseagreen;
+    border-color: slategray;
+}
+.dark> div > div > div > div> div> div> div> div > a > p {
+    color: darkseagreen;
+}
+.dark input[type=text]{
+    background-color: slategray;
+}
+.dark div.MuiBox-root > p{
+    color: greenyellow;
+    font-weight: 800;
+}
+#root div.MuiBox-root> div{
+    height: 10px;
+}
+#root div.MuiBox-root> p{
+    font-weight: 800;
 }

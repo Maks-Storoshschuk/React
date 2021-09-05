@@ -1,0 +1,16 @@
+.genre{
+    width: 10%;
+    background-color: #FFFFFF;
+    text-align: center;
+
+}
+.genre>a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+
+}
+.genre>a>p{
+    border: 2px solid black;
+    border-radius: 5px;
+}

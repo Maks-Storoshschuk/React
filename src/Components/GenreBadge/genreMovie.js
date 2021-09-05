@@ -16,7 +16,7 @@ export default function GenresMovie({location: {state : item}}){
     }, [item]);
 
     return(
-        <div className={'movies'}>
+        <div className={'MOVIES'}>
 
             {genresMovie.map(value => <MoviesCard  item ={value} key={value.id}/>)}
 

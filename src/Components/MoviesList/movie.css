@@ -1,0 +1,7 @@
+.MOVIES{
+    width: 80%;
+    margin-left: 5%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+}

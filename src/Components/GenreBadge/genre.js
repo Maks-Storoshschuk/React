@@ -16,7 +16,7 @@ export default function Genres(){
 
 
     return(
-        <div>
+        <div className={'genre'}>
             {genres.map(value => <Link  to={{pathname: `/genre/id:${value.id}`,state: value.id}}><p>{value.name}</p></Link>)}
         </div>
     )
