@@ -4,7 +4,6 @@ import {GenreName} from "../GenreBadge/nameSelectMovieGenre";
 import './moviescard.css'
 
 export default function MoviesCard({item}){
-
     return(
         <div className={"MOCA"}>
             <Link  to={{pathname: `/id:${item.id}`, state: item}}><img

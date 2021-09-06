@@ -10,22 +10,14 @@
     background-color: black;
     color: darkseagreen;
 }
-.dark>div>div>div>div{
-    background-color: black;
-    color: darkseagreen;
-}
-.dark>div>div>div>div>div{
-    background-color: black;
-    color: darkseagreen;
-}
 .dark p *{
     color: darkseagreen;
 }
-.dark> div > div > div > div.d-flex > div.genre > a> p{
+.dark .genre > a> p{
     color: darkseagreen;
     border-color: slategray;
 }
-.dark> div > div > div > div> div> div> div> div > a > p {
+.dark  a > p {
     color: darkseagreen;
 }
 .dark input[type=text]{
@@ -40,4 +32,65 @@
 }
 #root div.MuiBox-root> p{
     font-weight: 800;
+}
+.dark .themeHome{
+    background-color: rgba(0, 0, 0, 0);
+}
+.dark .themeHome>a{
+    color: darkseagreen;
+
+}
+.dark .themeHome>button{
+    background-color: blanchedalmond;
+    color: black;
+}
+@media screen and (max-width: 720px) {
+    .header{
+        justify-content: space-between;
+        margin: 0;
+        width: 100%;
+    }
+    .header > img:nth-child(1) {
+        margin-left: 1%;
+    }
+    .header form{
+        width: 30%;
+    }
+    .themeHome a{
+        margin-right: 30%;
+    }
+    .themeHome button{
+        font-size: 40px;
+    }
+    .themeHome {
+        position: relative;
+        top: -10px;
+        font-size: 40px;
+    }
+    .MOVIES{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+
+    }
+    .MOVIES .MOCA{
+        width: 46%;
+        margin: 1%;
+    }
+    .genre{
+        display:none
+    }
+    .MOCA a>img{
+        width: 95%;
+        margin: 0;
+    }
+    .info{
+        margin: 0;
+        width: 100%;
+    }
+    .header h4 {
+        display: none;
+    }
+
 }

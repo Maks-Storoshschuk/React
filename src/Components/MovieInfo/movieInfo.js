@@ -1,7 +1,6 @@
 import LinearWithValueLabel from "../line/line";
 import './movieInfo.css'
 export function MovieInfo({location: {state : item}}){
-    console.log(item)
     return(
         <div className={'info'}>
 

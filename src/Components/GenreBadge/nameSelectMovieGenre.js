@@ -11,7 +11,7 @@ export function GenreName ({genre_ids}){
         <div>
 
                 {
-                    genresName.map(value => <Link  to={{pathname: `/genre/id:${value.id}`,state: value.id}}><p>{value.name}</p></Link>)
+                    genresName.map(value => <Link key={value.id} to={{pathname: `/genre/${value.name}`,state: value.id}}><p>{value.name}</p></Link>)
                 }
 
 

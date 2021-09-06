@@ -5,3 +5,20 @@
     display: flex;
     flex-wrap: wrap;
 }
+.navigation{
+    width: 100%;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 32px;
+
+}
+.navigation button {
+    font-weight: 800;
+    font-size: 32px;
+    background-color: lightslategray;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.navigation p{
+    margin: 0 5% 0 5%;
+}

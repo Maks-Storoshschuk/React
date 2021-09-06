@@ -5,19 +5,18 @@ import './genres.css'
 import {Link} from "react-router-dom";
 export default function Genres(){
     const genres = useSelector(({genres}) => genres)
-    console.log(genres);
 
     const dispatch = useDispatch();
 
 
     useEffect(()=>{
         dispatch(getGenres());
-    }, []);
+    });
 
 
     return(
         <div className={'genre'}>
-            {genres.map(value => <Link  to={{pathname: `/genre/id:${value.id}`,state: value.id}}><p>{value.name}</p></Link>)}
+            {genres.map(value => <Link key={value.id}  to={{pathname: `/genre/${value.name}`,state: value.id}}><p>{value.name}</p></Link>)}
         </div>
     )
 }

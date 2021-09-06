@@ -12,8 +12,8 @@ const config = {
 
 const myAxios = axios.create(config);
 
-const getMovies = () => async (dispatch) => {
-    const response = await myAxios.get('/discover/movie');
+const getMovies = (page) => async (dispatch) => {
+    const response = await myAxios.get(`/discover/movie?page=${page}`);
     dispatch(pushMovies(response.data.results))
 }
 
