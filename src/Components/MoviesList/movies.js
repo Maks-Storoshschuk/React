@@ -1,21 +1,19 @@
 import {useEffect, useState} from "react";
-import {getMovies} from "../services/getMovie";
 import {useDispatch, useSelector} from "react-redux";
 import MoviesCard from "../MoviesListCard/moviescard";
 import './movie.css'
+import {getMovies} from "../services/getServices";
 
 
 export default function Movie(){
 
     const movies = useSelector(({movies}) => movies)
 
-
-
     const dispatch = useDispatch();
+
     let [page,setPage] = useState(1)
     useEffect(()=>{
         dispatch(getMovies(page));
-
     }, [dispatch,page]);
     return(
         <div className={'MOVIES'}>

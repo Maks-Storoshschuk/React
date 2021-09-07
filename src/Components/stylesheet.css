@@ -6,6 +6,9 @@
     background-color: black;
     color: darkseagreen;
 }
+.dark h2{
+    color: darkseagreen;
+}
 .dark>div>div>div{
     background-color: black;
     color: darkseagreen;
@@ -39,6 +42,9 @@
 .dark .themeHome>a{
     color: darkseagreen;
 
+}
+.dark .info a{
+    color: white;
 }
 .dark .themeHome>button{
     background-color: blanchedalmond;

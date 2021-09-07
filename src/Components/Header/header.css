@@ -8,12 +8,14 @@
 .header > div{
     display: flex;
     align-items: center;
+    margin-right: 5%;
 }
 .header > div > img{
     width: 72px;
     border-radius: 36px;
     height: 72px;
     margin-right: 10%;
+
 
 }
 .header > form > input[type=text] {

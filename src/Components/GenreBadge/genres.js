@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getGenres} from "../services/getGenres";
+import {getServices} from "../services/getServices";
 import './genres.css'
 import {Link} from "react-router-dom";
 export default function Genres(){
@@ -10,7 +10,7 @@ export default function Genres(){
 
 
     useEffect(()=>{
-        dispatch(getGenres());
+        dispatch(getServices());
     });
 
 

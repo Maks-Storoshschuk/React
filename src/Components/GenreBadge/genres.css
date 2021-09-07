@@ -1,6 +1,8 @@
 .genre{
-    background-color: #FFFFFF;
+    display: block;
     text-align: center;
+    background-color: #FFFFFF;
+    margin-left: 5%;
 
 }
 .genre>a{

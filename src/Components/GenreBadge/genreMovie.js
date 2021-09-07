@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import './genres.css'
-import {getGenresMovies} from "../services/getMovieGenre";
 import MoviesCard from "../MoviesListCard/moviescard";
+import {getGenresMovies} from "../services/getServices";
 
 export default function GenresMovie({location: {state : item}}){
     const genresMovie = useSelector(({genresMovie}) => genresMovie)
