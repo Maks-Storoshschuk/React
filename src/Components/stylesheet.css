@@ -81,7 +81,7 @@
 
     }
     .MOVIES .MOCA{
-        width: 46%;
+        width: 98%;
         margin: 1%;
     }
     .genre{
@@ -98,5 +98,12 @@
     .header h4 {
         display: none;
     }
-
+    .MOCA a> img:nth-child(1){
+        display: none;
+    }
+}
+@media screen and (min-width: 720px) {
+    .MOCA a> img:nth-child(2){
+        display: none;
+    }
 }

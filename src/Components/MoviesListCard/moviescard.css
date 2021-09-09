@@ -20,3 +20,21 @@
     color: black;
     text-decoration: none;
 }
+.MOCA>i{
+    position: relative;
+    display: inline-block;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 4.8em;
+    line-height: 1.2em;
+}
+.genre_under_movies>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.genre_under_movies p{
+    padding: 10px;
+    text-decoration: underline;
+}
